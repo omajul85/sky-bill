@@ -8,7 +8,6 @@ class SkyBill < Sinatra::Base
   
   register Sinatra::Partial
   
-  # The order of set and enable matters !
   set :partial_template_engine, :erb
   enable :partial_underscores
 

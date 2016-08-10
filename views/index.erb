@@ -40,7 +40,7 @@
 
     <button class="accordion active">Sky store</button>
     <div id="foo" class="panel show">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <%= partial :store %>
     </div>
   </div>
 
@@ -48,16 +48,6 @@
     <p>Bill unattended test by <a href="https://github.com/omajul85/sky-bill" target="_blank">Omar Alvarez</a></p>
   </footer>
   
-  <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function(){
-          this.classList.toggle("active");
-          this.nextElementSibling.classList.toggle("show");
-    }
-  }
-  </script>
+  <script src="javascripts/accordion.js"></script>
 </body>
 </html>
