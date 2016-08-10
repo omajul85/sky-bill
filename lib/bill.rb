@@ -5,7 +5,7 @@ require 'http'
 # Send API request and converts json to an object via OpenStruct
 class Bill
 	
-	URL = "http://safe-plains-5453.herokuapp.com/bill.json".freeze
+	URL = "https://safe-plains-5453.herokuapp.com/bill.json".freeze
 
 	attr_reader :statement, :total, :package, :callCharges, :skyStore
 
