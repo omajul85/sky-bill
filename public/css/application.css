@@ -1,0 +1,57 @@
+html {
+	margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 767px;
+  font-family: 'Varela Round', sans-serif;
+  color: #333;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #C9C7D1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #C9C7D1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #C9C7D1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #C9C7D1); /* Standard syntax (must be last) */
+}
+
+.navbar {
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+a {
+	color: #0072c9;
+}
+
+nav p {
+  margin: 10px;
+  float: right;
+}
+
+#logo {
+  width: 80px;
+  display: inline-block;
+	margin: 0 auto;
+}
+
+footer {
+  background-color: #0073c5;
+  color: white;
+  padding: 15px;
+}
+
+footer a {
+	color: black;
+}
+
+footer a:hover {
+	color: #F703A1;
+}
+
+.container-fluid {
+  border-radius: 10px;	
+}
