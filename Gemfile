@@ -6,6 +6,7 @@ gem 'http'
 gem 'json'
 gem 'sinatra'
 gem 'activesupport'
+gem 'sinatra-partial'
 
 group :test do
   gem 'rspec'
