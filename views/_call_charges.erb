@@ -11,7 +11,7 @@
       <tr>
         <td><%= elem.called %></td>
         <td><%= elem.duration %></td>
-        <td><%= elem.cost %></td>
+        <td><%= format_cost(elem.cost) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -19,7 +19,7 @@
     <tr class="total">
       <td><h4>Total:</h4></td>
       <td></td>
-      <td><h4><strong>£<%= @bill.callCharges.total %></strong></h4></td>
+      <td><h4><strong>£<%= format_cost(@bill.callCharges.total) %></strong></h4></td>
     </tr>
   </tfoot>
 </table>
