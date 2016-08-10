@@ -52,6 +52,12 @@ footer a:hover {
   padding-left: 0px;	
 }
 
+#header-text {
+	position: relative;
+	margin-top: 1em;
+  float: right;	
+}
+
 button.accordion {
 	background-color: #eee;
 	cursor: pointer;
@@ -93,7 +99,7 @@ div.panel {
 
 div.panel.show {
 	opacity: 1;
-	max-height: 500px;
+	max-height: inherit;
 }
 
 .jumbotron {

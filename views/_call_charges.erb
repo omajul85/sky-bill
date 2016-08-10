@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Number called</th>
+      <th>Duration</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bill.callCharges.calls.each do |elem| %>
+      <tr>
+        <td><%= elem.called %></td>
+        <td><%= elem.duration %></td>
+        <td><%= elem.cost %></td>
+      </tr>
+    <% end %>
+    <tr class="total">
+      <td><h4>Total:</h4></td>
+      <td></td>
+      <td><h4><strong>£<%= @bill.callCharges.total %></strong></h4></td>
+    </tr>
+  </tbody>
+</table>
