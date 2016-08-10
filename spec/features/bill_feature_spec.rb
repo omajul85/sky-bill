@@ -13,9 +13,26 @@ feature 'Sky bill features:' do
       visit '/'
     end
   
-    it 'Prints the total' do
+    it 'Prints the total due' do
       expect(current_path).to eq '/'
       expect(page).to have_content bill['total']
-    end    
+    end
+
+    it 'Prints the billing period' do
+      expect(current_path).to eq '/'
+      str = "From #{bill['statement']['period']['from']} to #{bill['statement']['period']['to']}"
+      expect(page).to have_content str
+    end
+
+    it 'Does not print the list of calls (hidden by default)' do
+      expect(current_path).to eq '/'
+      find(:css, "#charges").should_not be_visible
+    end
+
+    it 'Prints the list of calls if button clicked' do
+      expect(current_path).to eq '/'
+      click_button('charges')
+      expect(page).to have_content "List of calls"
+    end
   end
 end

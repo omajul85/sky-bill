@@ -1,9 +1,16 @@
 require 'sinatra/base'
+require 'sinatra/partial'
 require './lib/bill.rb'
 
 class SkyBill < Sinatra::Base
 
   set :public_folder, File.dirname(__FILE__) + '/public'
+  
+  register Sinatra::Partial
+  
+  # The order of set and enable matters !
+  set :partial_template_engine, :erb
+  enable :partial_underscores
 
   before do
     @bill = Bill.new

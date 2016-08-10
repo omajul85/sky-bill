@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bill.package.subscriptions.each do |elem| %>
+    <tr>
+      <td><%= elem.type.capitalize %></td>
+      <td><%= elem.name %></td>
+      <td><%= elem.cost %></td>
+    </tr>
+    <% end %>
+    <tr class="total">
+      <td><h4>Total:</h4></td>
+      <td></td>
+      <td><h4><strong>£<%= @bill.package.total %></strong></h4></td>
+    </tr>
+  </tbody>
+</table>
