@@ -1,1 +1,5 @@
-<p><%= @bill %></p>
+<ul>
+	<% @bill.callCharges.calls.each do |call|%>
+		<li><%= call.cost %></li>
+	<% end %>
+</ul>

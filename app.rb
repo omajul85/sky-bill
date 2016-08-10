@@ -6,7 +6,7 @@ class SkyBill < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/public'
 
   before do
-    @bill = get_json_from_api
+    @bill = Bill.new
   end
 
   get '/' do
