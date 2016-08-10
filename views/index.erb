@@ -18,18 +18,48 @@
         <a class="navbar-brand" href="#"><img id="logo" alt="Brand" src="images/logo.png"></a>
       </div>
       <div class="nav navbar-nav navbar-right">
-        <h3>Bill from <%= @bill.statement.period.from %> to <%= @bill.statement.period.to %></h3>
+        <h3>Bill generated on <%= @bill.statement.generated %></h3>
       </div>
     </div>
   </nav>
   <hr>
+  
+  <div id="content" class="container-fluid text-center">
+    <div class="jumbotron">
+      <h2>Total Due <strong>£<%= @bill.total %></strong></h2>
+      <h5>From <%= @bill.statement.period.from %> to <%= @bill.statement.period.to %></h5>
+    </div>
+    
+    <button class="accordion active">My subscriptions</button>
+    <div class="panel show">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 
-  <div id="content" class="container-fluid text-center"> 
-    <p><%= @bill.total %></p>
+    <button id="charges" class="accordion">Call charges</button>
+    <div class="panel">
+      <p>List of calls here</p>
+    </div>
+
+    <button class="accordion active">Sky store</button>
+    <div id="foo" class="panel show">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
   </div>
 
   <footer class="container-fluid text-center">
     <p>Bill unattended test by <a href="https://github.com/omajul85/sky-bill" target="_blank">Omar Alvarez</a></p>
   </footer>
+  
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
+    }
+  }
+  </script>
 </body>
 </html>
