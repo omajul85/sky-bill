@@ -1,8 +1,13 @@
 require 'sinatra/base'
+require './lib/bill.rb'
 
 class SkyBill < Sinatra::Base
 
   set :public_folder, File.dirname(__FILE__) + '/public'
+
+  before do
+    @bill = get_json_from_api
+  end
 
   get '/' do
     erb :index
