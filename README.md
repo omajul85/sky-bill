@@ -82,11 +82,10 @@ The server file `app.rb` is in the project root folder. The project has a lib fo
 
 Technologies used
 -----------------
-
-	* Sinatra
-	* Bootstrap
-	* Rspec
-	* JavaScript
+- Sinatra
+- Bootstrap
+- Rspec
+- JavaScript
 
 Deployment
 ----------
