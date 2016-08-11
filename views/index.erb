@@ -11,23 +11,13 @@
   <link href="/css/application.css" rel="stylesheet" type="text/css">
   <title>Sky Bill by omajul85</title>
 </head>
+
 <body class='container'>
-  <nav class="navbar navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="https://www.sky.com/" target="_blank"><img id="logo" alt="Sky Logo" src="images/logo.png"></a>
-      </div>
-      <h4 id="header-text">Bill generated on <%= @bill.statement.generated %></h4>
-    </div>
-  </nav>
-  <hr>
-  
-  <div id="content" class="container-fluid text-center">
-    <div class="jumbotron">
-      <h2>Total Due <strong>£<%= @bill.total %></strong></h2>
-      <h5>From <%= @bill.statement.period.from %> to <%= @bill.statement.period.to %></h5>
-    </div>
+  <%= partial :header %>
     
+  <div id="content" class="container-fluid text-center">
+    <%= partial :statement %>
+
     <button class="accordion active">My subscriptions</button>
     <div class="panel show">
       <%= partial :subscriptions %>
@@ -45,7 +35,7 @@
   </div>
 
   <footer class="container-fluid text-center">
-    <p>Bill unattended test by <a href="https://github.com/omajul85/sky-bill" target="_blank">Omar Alvarez</a></p>
+    <p>Bill unattended test by <a href="https://github.com/omajul85/CV" target="_blank">Omar Alvarez</a></p>
   </footer>
   
   <script src="javascripts/accordion.js"></script>
