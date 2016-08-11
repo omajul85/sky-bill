@@ -35,9 +35,9 @@ Then, you can open your browser and visit `localhost:9292`.
 You can run the test using the command below:
 
 ```sh
+$ cd sky-bill/
 $ rspec
 ```
-
 
 Project structure
 -----------------
@@ -78,6 +78,15 @@ The tree below shows how the project is organised:
 ```
 
 The server file `app.rb` is in the project root folder. The project has a lib folder that contains the business logic (ruby classes). The unit test are stored on the spec folder. The subfolder features contains the feature tests (tests related to the web application seen on a browser). The folder views contains the presentation layer, that is, the index view (for the home page) and some partials (one for each category of information according to the given json file). The folder public contains 3 subfolders, one for the CSS files, other for the images used on the application and finally another for the javascript files (accordion effect in this case).
+
+
+Technologies used
+-----------------
+
+	* Sinatra
+	* Bootstrap
+	* Rspec
+	* JavaScript
 
 Deployment
 ----------
