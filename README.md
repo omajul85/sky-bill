@@ -1,4 +1,4 @@
-Sky Bill unattended test 
+Bill unattended test 
 ========================
 
 **Author:** Omar Alvarez
@@ -6,7 +6,7 @@ Sky Bill unattended test
 Task
 ----
 
-To display a customer's Sky bill
+To display a customer's bill
 
 ## Requirements
 
