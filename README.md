@@ -1,4 +1,4 @@
-Bill unattended test 
+Bill unattended test
 ========================
 
 **Author:** Omar Alvarez
@@ -11,7 +11,7 @@ To display a customer's bill
 ## Requirements
 
 * Complete the task in a language of your choice using whatever tools or frameworks that you want.
-* Must consume bill JSON from endpoint: 
+* Must consume bill JSON from endpoint:
 ```
 http://safe-plains-5453.herokuapp.com/bill.json
 ```
@@ -46,10 +46,11 @@ The tree below shows how the project is organised:
 
 ```sh
 .
-├── app.rb
-├── config.ru
 ├── Gemfile
 ├── Gemfile.lock
+├── README.md
+├── app.rb
+├── config.ru
 ├── lib
 │   └── bill.rb
 ├── public
@@ -60,7 +61,6 @@ The tree below shows how the project is organised:
 │   │   └── logo.png
 │   └── javascripts
 │       └── accordion.js
-├── README.md
 ├── spec
 │   ├── bill_spec.rb
 │   ├── features
@@ -69,12 +69,14 @@ The tree below shows how the project is organised:
 │   └── support
 │       └── bill.json
 └── views
-    ├── _call_charges.erb
+    ├── call_charges.slim
+    ├── header.slim
     ├── helpers
     │   └── view_helpers.rb
-    ├── index.erb
-    ├── _store.erb
-    └── _subscriptions.erb
+    ├── index.slim
+    ├── statement.slim
+    ├── store.slim
+    └── subscriptions.slim
 ```
 
 The server file `app.rb` is in the project root folder. The project has a lib folder that contains the business logic (ruby classes). The unit test are stored on the spec folder. The subfolder features contains the feature tests (tests related to the web application seen on a browser). The folder views contains the presentation layer, that is, the index view (for the home page) and some partials (one for each category of information according to the given json file). The folder public contains 3 subfolders, one for the CSS files, other for the images used on the application and finally another for the javascript files (accordion effect in this case).
@@ -86,6 +88,7 @@ Technologies used
 - Bootstrap
 - Rspec
 - JavaScript
+- Slim
 
 Deployment
 ----------
