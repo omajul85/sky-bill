@@ -7,6 +7,7 @@ gem 'json'
 gem 'sinatra'
 gem 'activesupport'
 gem 'sinatra-partial'
+gem 'slim'
 
 group :test do
   gem 'rspec'
