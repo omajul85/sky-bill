@@ -1,0 +1,40 @@
+table class="table table-hover"
+  thead
+    tr.store-category
+      th Rentals
+      th
+      th
+    tr
+      th Title
+      th 
+      th Cost
+  tbody
+    - for elem in @bill.skyStore.rentals
+      tr
+        td = elem.title
+        td
+        td = format_cost(elem.cost)
+
+  thead
+    tr.store-category
+      th Buy & Keep
+      th
+      th
+    tr
+      th Title
+      th 
+      th Cost
+  tbody
+    - for elem in @bill.skyStore.buyAndKeep
+      tr
+        td = elem.title
+        td
+        td = format_cost(elem.cost)
+  tfoot
+  tr.total
+    td
+      h4 Total:
+    td
+    td
+      h4
+        strong = "£#{format_cost(@bill.skyStore.total)}"

@@ -1,0 +1,5 @@
+.jumbotron
+  h2
+    | Total Due 
+    strong = " £#{@bill.total}"
+  h5 = "From #{@bill.statement.period.from} to #{@bill.statement.period.to}"

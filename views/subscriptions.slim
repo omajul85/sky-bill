@@ -1,0 +1,20 @@
+table class="table table-hover"
+  thead
+    tr
+      th Type
+      th Name
+      th Cost
+  tbody
+    - for elem in @bill.package.subscriptions
+      tr
+        td = elem.type.capitalize
+        td = elem.name
+        td = format_cost(elem.cost)
+  tfoot
+    tr.total
+      td
+        h4 Total:
+      td
+      td
+        h4
+          strong = "£#{format_cost(@bill.package.total)}"
